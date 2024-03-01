@@ -53,7 +53,7 @@ pipeline {
     stage('Deploy to Nexus Repository') {
         steps{
            withMaven(globalMavenSettingsConfig: 'global-maven', jdk: 'jdk11', maven: 'maven3', mavenSettingsConfig: '', traceability: true) {
-               sh "mvn deploy"
+            
               }
             }
           }
