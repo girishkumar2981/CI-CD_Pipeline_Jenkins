@@ -57,24 +57,5 @@ pipeline {
               }
             }
           }
-    /*stage('Update Deployment File') {
-        environment {
-            GIT_REPO_NAME = "CI-CD_Pipeline_Jenkins"
-            GIT_USER_NAME = "girishkumar2981"
-        }
-        steps {
-            withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
-                sh '''
-                    git config user.email "girishkumar2981@gmail.com"
-                    git config user.name "Girish Kumar Pillarisetty"
-                    BUILD_NUMBER=${BUILD_NUMBER}
-                    sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" Jenkins_spring_boot_app/spring-boot-app-manifests/deployment.yml
-                    git add Jenkins_spring_boot_app/spring-boot-app-manifests/deployment.yml
-                    git commit -m "Update deployment image to version ${BUILD_NUMBER}"
-                    git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
-                '''
-            }
-        }
-    } */
   }
 }
