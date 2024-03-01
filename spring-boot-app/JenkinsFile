@@ -57,7 +57,7 @@ pipeline {
               }
             }
           }
-    stage('Update Deployment File') {
+    /*stage('Update Deployment File') {
         environment {
             GIT_REPO_NAME = "CI-CD_Pipeline_Jenkins"
             GIT_USER_NAME = "girishkumar2981"
@@ -75,6 +75,6 @@ pipeline {
                 '''
             }
         }
-    }
+    } */
   }
 }
