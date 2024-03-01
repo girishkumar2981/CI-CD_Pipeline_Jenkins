@@ -9,14 +9,14 @@ pipeline {
     stage('Checkout') {
       steps {
         sh 'echo passed'
-        //git branch: 'main', url: 'https://github.com/girishkumar2981/CI/CD_Pipeline.git'
+        //git branch: 'main', url: 'https://github.com/girishkumar2981/CI-CD_Pipeline_Jenkins.git'
       }
     }
     stage('Build and Test') {
       steps {
         sh 'ls -ltr'
         // build the project and create a JAR file
-        sh 'cd Jenkins_spring_boot_app/spring-boot-app && mvn clean package'
+        sh 'cd spring-boot-app && mvn clean package'
       }
     }
     stage('Static Code Analysis') {
@@ -25,7 +25,7 @@ pipeline {
       }
       steps {
         withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
-          sh 'cd Jenkins_spring_boot_app/spring-boot-app && mvn sonar:sonar -Dsonar.login=$SONAR_AUTH_TOKEN -Dsonar.host.url=${SONAR_URL}'
+          sh 'cd spring-boot-app && mvn sonar:sonar -Dsonar.login=$SONAR_AUTH_TOKEN -Dsonar.host.url=${SONAR_URL}'
         }
       }
     }
@@ -36,7 +36,7 @@ pipeline {
       }
       steps {
         script {
-            sh 'cd Jenkins_spring_boot_app/spring-boot-app && docker build -t ${DOCKER_IMAGE} .'
+            sh 'cd spring-boot-app && docker build -t ${DOCKER_IMAGE} .'
             def dockerImage = docker.image("${DOCKER_IMAGE}")
             docker.withRegistry('https://index.docker.io/v1/', "docker-cred") {
                 dockerImage.push()
@@ -46,7 +46,7 @@ pipeline {
     }
     stage('Update Deployment File') {
         environment {
-            GIT_REPO_NAME = "CI/CD_Pipeline"
+            GIT_REPO_NAME = "CI-CD_Pipeline_Jenkins"
             GIT_USER_NAME = "girishkumar2981"
         }
         steps {
