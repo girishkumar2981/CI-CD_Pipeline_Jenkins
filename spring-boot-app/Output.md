@@ -1,4 +1,4 @@
-<h1> OUTPUTS: </h1>
+<h1> Outputs: </h1>
 
 <h3> Continuous Integration </h3>
 
@@ -12,13 +12,14 @@
 
 <h3> Implemented Hub-Spoke Model </h3>
 
-<img width="468" alt="image" src="https://github.com/girishkumar2981/CI-CD_Pipeline_Jenkins/assets/61040201/9fee7a7f-e55a-4872-8024-e6fe44ab7876">
-
-
 <img width="468" alt="image" src="https://github.com/girishkumar2981/CI-CD_Pipeline_Jenkins/assets/61040201/e969bafa-4734-40b3-a539-0dcccdf6f667">
 
 
 <img width="468" alt="image" src="https://github.com/girishkumar2981/CI-CD_Pipeline_Jenkins/assets/61040201/9e255c08-8187-492b-a824-3bbe4d01b5ae">
+
+
+<img width="468" alt="image" src="https://github.com/girishkumar2981/CI-CD_Pipeline_Jenkins/assets/61040201/9fee7a7f-e55a-4872-8024-e6fe44ab7876">
+
 
 <h3>Tried to change the deployment file, and ArgoCD Sync status turned to Out of Sync </h3>
 
