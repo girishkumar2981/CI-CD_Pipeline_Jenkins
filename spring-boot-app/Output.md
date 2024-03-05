@@ -10,6 +10,8 @@
 
 <h3> Continuous Deployment </h3>
 
+<h3> Implemented Hub-Spoke Model </h3>
+
 <img width="468" alt="image" src="https://github.com/girishkumar2981/CI-CD_Pipeline_Jenkins/assets/61040201/9fee7a7f-e55a-4872-8024-e6fe44ab7876">
 
 
